@@ -1,0 +1,11 @@
+{
+  "name": "node-mongo-backend-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dyegorov/node-mongo-backend-example.git",
+  "author": "dyegorov <d.yegorov@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
