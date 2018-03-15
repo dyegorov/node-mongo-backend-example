@@ -10,5 +10,6 @@ Example of backend using node.js (express) and mongodb
 
 ## Run server
 ```
-node index.js
+$ node index.js
+$ nodemon index.js
 ```
