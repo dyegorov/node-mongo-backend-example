@@ -15,13 +15,13 @@ const userController = User => {
         } else {
           if (user) {
             res.status(400);
-            res.send(`Login ${login} already taken :(`);
+            res.send(`Login "${login}" already taken :(`);
           } else {
             let user = new User(req.body);
             user.save((err, user) => {
               if (err) {
                 res.status(500);
-                res.send(`Saving user ${login} failed :(`);
+                res.send(`Saving user "${login}" failed :(`);
               } else {
                 res.status(200);
                 res.send({ _id: user._id, login: user.login });

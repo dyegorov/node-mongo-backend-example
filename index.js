@@ -4,7 +4,7 @@ const app = require('express')(),
   bodyParser = require('body-parser');
 
 const index = require('./routes/index'),
-  user = require('./routes/user');
+  users = require('./routes/users');
 
 const port = config.server.port || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 const db = mongoose.connect(`mongodb://${config.db.host}/${config.db.name}`);
 
 app.use('/api/v1', index);
-app.use('/api/v1/user', user);
+app.use('/api/v1/users', users);
 
 app.listen(port, () => {
   console.log('process.env.NODE_ENV:', process.env.NODE_ENV);

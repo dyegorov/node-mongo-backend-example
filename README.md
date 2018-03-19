@@ -3,8 +3,7 @@ Example of backend using node.js (express) and mongodb
 
 ## TODO
 - [X] GET hello world from localhost
-- [X] POST users/register
-- [ ] POST users
+- [X] POST users
 - [ ] GET users/:id
 - [ ] PUT users/:id
 - [ ] DELETE users/:id
