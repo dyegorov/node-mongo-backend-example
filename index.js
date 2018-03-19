@@ -1,7 +1,13 @@
-const app = require('express')();
+const app = require('express')(),
+  config = require('config');
 
-const port = process.env.PORT || 3000;
+const index = require('./routes/index');
 
-app.get('/', (req, res) => res.send("Hello, world"));
+const port = config.server.port || 3000;
 
-app.listen(3000, () => console.log('server listening on port ', port));
+app.use(index);
+
+app.listen(port, () => {
+  console.log('process.env.NODE_ENV:', process.env.NODE_ENV);
+  console.log('server listening on port ', port);
+});
