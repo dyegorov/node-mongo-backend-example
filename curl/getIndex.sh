@@ -1,0 +1,1 @@
+curl -XGET -H 'Content-type: application/json' http://localhost:3000/api/v1

@@ -1,1 +1,0 @@
-curl -XGET -H 'Content-type: application/json' http://localhost:$PORT/
