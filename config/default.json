@@ -6,5 +6,6 @@
   "db" : {
     "host" : "localhost",
     "name" : "nodemongoapi"
-  }
+  },
+  "secret": "in secret we trust"
 }

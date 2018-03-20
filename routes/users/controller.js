@@ -33,7 +33,23 @@ const userController = User => {
     }
   }
 
-  return {register};
+  const remove = (req, res) => {
+    let userId = req.params.userId;
+    User.findByIdAndRemove(userId, (error, result) => {
+      if (error) {
+        res.status(500);
+        res.send({ message: "User remove error", error });
+      } else {
+        if (result) {
+          res.json({ message: `User ${userId} removed`, result });
+        } else {
+          res.send({ message: "User not found" });
+        }
+      }
+    })
+  }
+
+  return { register, remove };
 }
 
 module.exports = userController;
