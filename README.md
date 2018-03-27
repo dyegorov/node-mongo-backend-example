@@ -6,23 +6,19 @@ Example of backend using node.js (express) and mongodb
 - [X] POST users
 - [ ] GET users/:id
 - [ ] PUT users/:id
-- [ ] DELETE users/:id
+- [X] DELETE users/:id
+- [ ] GET cart to test auth
+
+- [ ] POST products
+- [ ] GET products/:id
 
 ## Run server
 ```
 $ node index.js
 $ nodemon index.js
 ```
+But better using scripts
+```
+$ yarn start:dev
+```
 
-## Curl it
-### POST users/register
-```
-$ . curl/postUserRegister.sh
-{"err":"Login is required"}
-$ . curl/postUserRegister.sh
-{"err":"Password is required"}
-$ . curl/postUserRegister.sh
-{"_id":"5aafbf4cc5a54975c872120a","login":"login"}
-$ . curl/postUserRegister.sh
-Login login already taken :(
-```

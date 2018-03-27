@@ -29,8 +29,12 @@ const userController = User => {
             })
           }
         }
-      })
+      });
     }
+  }
+
+  const login = (req, res) => {
+    res.send("Login route reached");
   }
 
   const remove = (req, res) => {
@@ -46,10 +50,10 @@ const userController = User => {
           res.send({ message: "User not found" });
         }
       }
-    })
+    });
   }
 
-  return { register, remove };
+  return { register, login, remove };
 }
 
 module.exports = userController;
