@@ -22,7 +22,7 @@ const productController = Product => {
       })
     }
   }
-  return {};
+  return { create };
 }
 
 module.exports = productController;

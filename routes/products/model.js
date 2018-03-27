@@ -6,7 +6,7 @@ const productsSchema = mongoose.Schema({
     en: { type: String, required: true }
   },
   category: { type: String, required: true },
-  isPublished: Boolean, default: false,
+  isPublished: { type: Boolean, default: false },
   isFavourite: Boolean, default: false,
   img4k: String,
   imgFHD: String,
