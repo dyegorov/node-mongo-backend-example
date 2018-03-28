@@ -4,6 +4,7 @@ const router = require('express').Router(),
 
 router.route('/about')
   .post(scene.createAbout)
-  .get(scene.getAbout);
+  .get(scene.getAbout)
+  .put(scene.updateAbout);
 
 module.exports = router;
