@@ -8,8 +8,9 @@ const sceneSchema = mongoose.Schema({
   desc1En: { type: String },  
   desc2Ru: { type: String },
   desc2En: { type: String },
-  members: { type: Array },  
-  data: mongoose.Schema.Types.Mixed
+  membersRu: { type: String }, 
+  membersEn: { type: String },     
+  imgFileName: { type: String }
 });
 
 module.exports = mongoose.model('Scene', sceneSchema);

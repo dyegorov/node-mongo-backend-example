@@ -34,8 +34,11 @@ const sceneController = Scene => {
     if (req.body.desc2Ru && req.body.desc2En) {
       findAndUpdate({ desc2Ru: req.body.desc2Ru, desc2En: req.body.desc2En }, res);
     }
-    if (req.body.members) {
-      findAndUpdate({ members }, res);
+    if (req.body.membersRu && req.body.membersEn) {
+      findAndUpdate({ membersRu: req.body.membersRu, membersEn: req.body.membersEn }, res);
+    }
+    if (req.files.img[0]) {
+      findAndUpdate({ imgFileName: req.files.img[0].filename}, res);
     }
   }
 
