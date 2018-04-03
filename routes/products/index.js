@@ -19,6 +19,6 @@ const uploadFields = upload.fields([
   { name: "imgSD", maxCount: 1 }
 ])
 
-router.route('/').post(uploadFields, product.create);
+router.route('/').post(product.create);
 
 module.exports = router;

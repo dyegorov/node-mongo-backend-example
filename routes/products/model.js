@@ -13,4 +13,4 @@ const productsSchema = mongoose.Schema({
   imgSD: String
 });
 
-module.exports = mongoose.model('Product', productsSchema);
+module.exports = mongoose.model('ProductOld', productsSchema);

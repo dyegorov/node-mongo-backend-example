@@ -4,7 +4,8 @@ const app = require('express')(),
   bodyParser = require('body-parser'),
   morgan = require('morgan'),
   passportService = require('./services/passport'),
-  passport = require('passport');
+  passport = require('passport'),
+  fileUpload = require('express-fileupload');
 
 const index = require('./routes/index'),
   users = require('./routes/users'),
@@ -16,6 +17,7 @@ const index = require('./routes/index'),
 const port = config.server.port || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(fileUpload());
 app.use(morgan('combined'));
 
 mongoose.Promise = global.Promise;
